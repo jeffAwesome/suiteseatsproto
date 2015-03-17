@@ -1,0 +1,409 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+html{
+	height:100%;
+	width:100%;
+}
+a{
+	text-decoration:none;
+}
+.width100{
+	width:78% !important;
+}
+.width85{
+	width:85% !important;
+}
+
+body{
+	margin:0px;
+	padding:0px;  
+	color:#FFFFFF;
+	font-family: 'Raleway', sans-serif;	
+	height:100%;
+	font-weight:bold;
+}
+.smallfont{
+	font-size:90%;
+}
+.bigfont{
+	font-size:120%;
+}
+.text-left{
+	text-align:left;
+}
+.text-right{
+	text-align:right;
+}
+img{
+	max-width:100%;
+}
+.text-center{
+	text-align:center;
+}
+.float-left {
+      float: left;
+}
+.float-right {
+      float: right;
+}
+.clear {
+      clear: both;
+}
+.navbar{
+	background-color:#010F40;
+	padding:20px 0 30px;
+	margin-bottom:50px;
+}
+.navbar .logoicon, .navbar .menu{
+	background:url("small_logo.png") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	height:32px;
+	width:32px;
+	cursor:pointer;
+}
+.closemenu{
+	background:url("TopArrow.png") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	height:12px;
+	width:20px;
+	margin-right:35px;
+	margin-top:5px;
+	cursor:pointer;
+}
+.mobilemenu{
+	position:absolute;
+	z-index:9;
+	background-color:#010F40;
+	width:100%;
+	display:none;
+	margin-top:15px;
+}
+.mobilemenu ul {
+	padding:0px;
+	margin-top:2px;
+}
+.mobilemenu ul li{
+	list-style:none;
+	text-align:center;
+	width:100%;
+	padding:10px 0px;
+	border-bottom:1px solid #434B67;
+	text-transform:uppercase;
+	margin-left:0px;
+}
+.mobilemenu ul li a{
+	color:#FFFFFF;
+}
+.navbar .logoicon{
+	margin-left:25px;
+}
+.backbtn{
+	padding:5px;
+	border:1px solid #FFFFFF;
+	border-radius:5px;
+	margin-left:20px;
+	font-size:90%;
+}
+.navbar .menu{
+	background:url("menu.png") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	margin-right:25px;
+}
+.tab-wrapper{
+	margin-bottom:10px;
+}
+.tab-wrapper ul{
+	padding:0px;
+	margin:0px;
+}
+.tab-wrapper ul li:first-child{
+	border-radius:4px 0px 0px 4px;
+	margin-right:-4px;
+}
+.tab-wrapper ul li:last-child{
+	border-radius:0px 4px 4px 0px;
+}
+.tab-wrapper ul li{
+	display:inline-block;
+	background-color:#FFFFFF;
+	box-shadow: 1px 2px 2px 0 #999999;
+	padding:23px 0%;	
+	width:40%;
+}
+.tab-wrapper ul li a{
+	color:#2952BB;
+	text-decoration:none;
+	font-size:18px;
+	font-weight:bold;
+}
+.tab-wrapper ul li.active{
+	box-shadow:none;
+	background-color:#2952BB;
+}
+.tab-wrapper ul li.active a{
+	color:#FFFFFF;
+}
+
+.homepage, .innerpage{
+	background:url("bg_loading.png") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	overflow:auto;
+	height:100%;
+}
+.innerpage{
+	background:url("white_bg.jpg") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+}
+.orderpage{
+	background:url("white_bg.jpg") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+}
+.logo{
+	padding:15% 10%;
+}
+.signbtn-wrapper, .signupbutton-wrapper{
+	margin-bottom:2em;
+}
+.signbtn{
+	background-color:rgba(255,255,255,0.1);
+	margin:15px 0px 0px;
+	font-weight:bold;
+	width:100%;
+	cursor:pointer;
+	font-size:1em;
+	color:inherit;
+	border:none;
+	padding:15px 0px;
+        display: block;
+}
+.signupbutton-wrapper button, .signinbtn, .footer .btncheckout, .btncheckout {	
+	margin:15px 0px 0px;
+	font-weight:bold;
+	box-shadow: 1px 2px 2px 1px #001580;
+	width:85%;
+	cursor:pointer;
+	font-size:1em;
+	color:inherit;
+	border:none;
+	padding:15px 0px;
+	border-radius:4px 4px 4px 4px;
+	color:#FFFFFF;
+}
+
+
+.venuelist{
+	width:100%;
+	margin-top:-50px;
+	background-color:#FFFFFF;
+	color:#0E1B4C;
+}
+.venuelist ul{
+	padding:0px;
+	margin:0px;
+}
+.venuelist ul li{
+	list-style:none;
+	padding:15px 20px;
+	border-bottom:1px solid #A1A1A1;
+	overflow:auto;
+}
+.venuelist ul li .venueimg{
+	width:20%;
+	padding-top:2%;
+	float:left;
+	text-align:center;
+}
+.venuelist ul li h2{
+	color:#2952BB;
+	font-size:18px;
+	letter-spacing:2.5px;
+}
+.venuelist ul li .venuedetails{
+	width:75%;
+	float:right;
+}
+.accordion-arrow{
+	float:right;
+}
+.concessionspage .venuedetails h2{
+	padding:5% 0px;
+}
+.signupbutton-wrapper .fbsignupbtn{
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.signupbutton-wrapper .mailsignupbtn{
+	padding:15px 0px;	
+}
+.signupbutton-wrapper button.fbsignupbtn, .signinbtn,  .footer .btncheckout, .btncheckout{
+	background-color:#2952BB;
+}
+.signupbutton-wrapper button.mailsignupbtn{
+	background-color:#FFFFFF;
+	color:#000022;
+}
+.signupbutton-wrapper .fbicon{
+	background:url("facebook.png") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	width:38px;
+	height:71px;
+	float:left;
+}
+.signupbutton-wrapper .mailicon{
+	background:url("email.png") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	width:41px;
+	height:35px;
+	float:left;
+}
+.signup-bottom{
+	color:#000022;
+	font-size:18px;
+	padding:20px 0px;
+}
+.signin-form{
+	width:80%;
+	margin:0px auto;
+}
+.signin-form input{
+	width:100%;
+}
+.leftico, .rightico{
+	width:10%;
+	height:40px;
+	margin-top:20px;
+}
+.field_form{
+	width:70%;
+}
+.halff{
+	width:35%;
+	margin:10px 5px !important;
+}
+.datefield{
+	width:48% !important;
+	float:left;
+}
+.cvvfield{
+	width:25% !important;
+	float:right;
+}
+.ccnumber:before{
+	background:url(lock.png) no-repeat left top;
+}
+.place-order-page{
+	width:85%;
+	margin:0px auto;
+        color: #333;
+}
+.signin-form .signinbtn{
+	width:74%;
+}
+.inputfield{
+	color:#000022;
+	margin:10px 0px;
+	font-size:18px;
+	padding:2.5% 5%;
+	height:40px;
+	border:1px solid #B7B6BA;
+}
+.inputmultiline{
+	height:100px;
+	font-family:inherit;
+	font-size:18px;
+	font-weight:bold;
+}
+.signup-bottom a{
+	color:#2952BB;
+	text-decoration:none;
+}
+.venuelist ul li ul .productitem{
+	border-bottom:none;
+	padding:10px 0px;
+}
+.accordion-details{
+	margin:5px auto;
+	width:95%;
+}
+.productitem .itemimg{
+	width:15%;
+	float:left;
+	text-align:center;
+}
+.productitem .itemdetails{
+	width:40%;
+	float:left;
+}
+.productitem .itemselection{
+	width:42%;
+	float:right;
+	text-align:right;
+}
+.itemselection > div, .itemselection img{
+	display:inline;
+	vertical-align:middle;
+}
+.itemselection img{
+	max-width:36px;
+}
+.itemselection  div.cnt{
+	margin:0px 20px;
+}
+.itemdetails .name{
+	color:#2952BB;
+	letter-spacing:2px;
+}
+.fixedfooter{
+	padding-bottom:100px;
+}
+.footer{
+	background-color:#02043D;
+	padding:15px;
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	margin-top:20px;
+}
+.footer .btncheckout{
+	width:44%;
+	float:left;
+	margin-left:5%;
+	margin-top:0px;
+}
+.footer .total-amount{
+	border:1px solid #FFFFFF;
+	border-radius:2px;
+	width:44%;
+	float:left;
+	padding:14px 0px;
+	text-align:center;
+	
+}
+.ordertotal, .orderposition{
+	margin:10px 0px 20px 0px; 
+}
+.navbar .title{
+	text-transform:uppercase;
+}
+.isorder{
+	margin:20px 0px;
+}
+.activeorders .lastest h2, .activeorders .orderdetails-wrapper .orderstatus{
+	color:#B90E00;
+}
+.venuelist .orderitems li,.orderitems li{
+	border-bottom:none !important;
+	font-weight:normal;
+	margin-left:0px;
+	padding:10px 0px 10px 0px;
+}
+.venuelist .orderitems li li{
+	padding:10px 0px 0px 15px;
+}
+
+.orderitems li ul li:before{ content:"-"; position:relative; left:-5px;}
+.orderitems li ul li{ text-indent:-5px; }
+
+.ordernumber, .orderstatus{
+	color:#0947AF;
+}
+.giftee-location{
+	margin:20px 0px;
+}
+.signuppad{
+	padding-top:25px;
+}
+.signupbutton-wrapper .mailsignupbtn .signuppad{
+	padding-top:10px;
+}

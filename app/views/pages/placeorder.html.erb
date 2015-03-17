@@ -1,0 +1,39 @@
+<div class="orderpage">
+		  <nav class="navbar">
+			<div class="text-center title"><span class="backbtn float-left">&lt; BACK</span><span>Seating Info</span><span class="menu float-right"></span></div>
+			<div class="mobilemenu">
+				<ul>
+					<li><a href="#">Sign up</a></li>
+					<li><a href="#">Sign In</a></li>
+					<li><a href="#">Billing Info</a></li>
+					<li><a href="#">Select Venue</a></li>
+					<li><a href="#">Order Concessions</a></li>
+					<li><a href="#">Check Order Status</a></li>
+				</ul>
+			</div>
+		  </nav>
+		   <!-- /row -->
+		  <div class="place-order-page text-center">
+		  	<div>
+			  	<div class="smallfont">Enter you seat location at</div><br>
+				<div class="vanue-name">Lloyd Noble Stadium</div><br>
+				<div class="smallfont"><a href="/pages/venue">Not your venue?</a></div><br><br>
+			</div>
+			<div class="fields">
+				<input class="inputfield " placeholder="SECTION  #", type="text" >
+				<div class="clear"></div>
+				<input class="inputfield halff float-left" placeholder="ROW #" type="text"  >
+				<input class="inputfield halff float-left" placeholder="SEAT #" type="text"  >
+                        </div>
+				<div class="clear"></div>
+				<div class="isorder text-left">
+					<%= image_tag "unselect.png", width: "30", align: "absmiddle" %> Is this order a gift?
+				</div>
+				<div class="text-left "><textarea class="inputfield inputmultiline width85">SPECIAL INSTRUCTIONS?</textarea></div>
+		  </div>
+		</div>
+		<div class="fixedfooter orderpage"></div>
+		<div class="footer text-center">
+			<div class="total-amount">TOTAL: $0.00</div>
+			<button class="btncheckout">Go Shopping</button>
+		</div>

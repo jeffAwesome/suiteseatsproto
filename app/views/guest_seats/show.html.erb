@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @guest_seat.user_id %>
+</p>
+
+<p>
+  <strong>Row:</strong>
+  <%= @guest_seat.row %>
+</p>
+
+<p>
+  <strong>Seat:</strong>
+  <%= @guest_seat.seat %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @guest_seat.section %>
+</p>
+
+<%= link_to 'Edit', edit_guest_seat_path(@guest_seat) %> |
+<%= link_to 'Back', guest_seats_path %>

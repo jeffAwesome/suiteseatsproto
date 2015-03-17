@@ -1,0 +1,44 @@
+<div class="innerpage">
+      <nav class="navbar">
+      <div class="text-center title"><span class="logoicon float-left"></span><span>JOIN SUITE SEATS</span><span class="menu float-right"></span></div>
+      </nav>
+       <!-- /row -->
+      <div class="row ">
+      <div class="text-center tab-wrapper">
+        <ul>
+        <li class="active"><a href="<%= new_user_registration_path %>">Sign Up</a></li>
+        <li><a href="<%= new_user_session_path %>">Sign In</a></li>
+        </ul>
+      </div>
+      </div>
+     <div class="text-center signin-form">
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="fields field_form ">
+
+            <%= f.email_field :email, autofocus: true, class: "inputfield", placeholder: "Email" %>
+
+            <% if @validatable %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "inputfield" %>
+
+            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "inputfield" %>
+
+          </div> <!-- fields -->
+
+          <div class="row signupbutton-wrapper text-center">
+            <%= f.submit "Sign up", class: "signinbtn" %>
+          </div>
+        <% end %>
+
+
+
+      </div>
+      <div class="row signup-bottom text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+

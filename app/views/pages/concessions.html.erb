@@ -1,0 +1,103 @@
+<div class="innerpage">
+      <%= render 'shared/main_nav' %>
+		   <!-- /row -->
+		  <div class="fixedfooter concessionspage venuelist" id="content">
+		  	<ul>
+				<li>
+					<div class="venueimg">
+						<%= image_tag "food.png" %>
+					</div>
+					<div class="venuedetails">
+						<h2>FOOD <span class="accordion-arrow">
+							<%= image_tag "up_arrow.png" %>
+							</span>
+						</h2>
+					</div>
+					<div class="clear"></div>
+					<div class="accordion-details">
+						<ul class="productlist">
+							<li class="productitem" data-item-name="Ice Cream" data-item-price"500" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "icecream.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">ICE CREAM</span><br>
+									<span class="price">$5.00</span>
+								</div>
+								<div class="itemselection" id="iceCreamQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+ 										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+							<li class="productitem" data-item-name="Hot Dog" data-item-price"500" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "hot_dog.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">HOT DOG</span><br>
+									<span class="price">$5.00</span>
+								</div>
+								<div class="itemselection" id="hotDogQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+							<li class="productitem" data-item-name="Pepperoni Pizza Slice" data-item-price"500" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "pizza.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">PEPPERONI PIZZA SLICE</span><br>
+									<span class="price">$5.00</span>
+								</div>
+								<div class="itemselection" id="pepPizzaQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div class="venueimg">
+						<%= image_tag "drinks.png" %>
+					</div>
+					<div class="venuedetails">
+						<h2>DRINKS
+							<span class="accordion-arrow">
+ 								<%= image_tag "down_arrow.png" %>
+							</span>
+						</h2>
+					</div>
+				</li>
+				<li>
+					<div class="venueimg">
+						<%= image_tag "tshirt.png" %>
+					</div>
+					<div class="venuedetails">
+						<h2>MERCHANDISE
+							<span class="accordion-arrow">
+								<%= image_tag "down_arrow.png" %>
+							</span>
+						</h2>
+					</div>
+				</li>
+			</ul>
+		  </div>
+		</div>
+               <%= render 'shared/footer' %>
