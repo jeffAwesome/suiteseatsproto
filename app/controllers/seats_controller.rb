@@ -25,6 +25,8 @@ class SeatsController < ApplicationController
   # POST /seats.json
   def create
     @seat = Seat.new(seat_params)
+    @seat.user_id = current_user.id
+    @seat.save
 
     respond_to do |format|
       if @seat.save

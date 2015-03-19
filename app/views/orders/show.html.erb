@@ -1,14 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @order.user_id %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @order.amount %>
-</p>
-
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
+<%= render 'shared/main_nav' %>
+<div class="orderstatus-page text-center venuelist">
+		  	<ul>
+				<li class="orderheader">
+					<div class="smallfont" >
+						Check on the status of the orders you placed:
+					</div>
+				</li>
+				<li class="orderdetails">
+					<div class="orderdetails-wrapper" >
+						<div class="ordernumber">ORDER #<%= @order.id %> - <%= @order.created_at.strftime('%r') %> </div>
+						<ul class="orderitems">
+                                                        <% @orderItems.each do |item| %>
+                                                           <% if item.item_quantity > 0 %>
+                                                            <li><%= item.item_quantity %> <%= item.item_name %></li>
+                                                           <% end %>
+                                                        <% end %>
+						</ul>
+						<div class="ordertotal">Total:  $<%= p '%.2f' % (@order.amount.to_i/100.0) %>
+</div>
+						<div class="orderposition">Row: <%= @seat.row  %>| Seat: <%= @seat.seat %></div>
+						<div class="orderstatus">Status: <%= @order.status %></div>
+					</div>
+				</li>
+
+			</ul>
+		  </div>
+		   <div class="row signupbutton-wrapper text-center">
+				<a href="/pages/concessions" class="signinbtn" style="display: block; width: 100%;">PLACE ANOTHER ORDER</a>
+			</div>
+		</div>

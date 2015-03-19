@@ -1,5 +1,6 @@
 class OrderItemsController < ApplicationController
   before_action :set_order_item, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /order_items
   # GET /order_items.json
@@ -26,12 +27,13 @@ class OrderItemsController < ApplicationController
   def create
     @order_item = OrderItem.new(order_item_params)
 
+    @order_item.user_id = current_user.id
+    @order_item.save
+
     respond_to do |format|
       if @order_item.save
-        format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
         format.json { render :show, status: :created, location: @order_item }
       else
-        format.html { render :new }
         format.json { render json: @order_item.errors, status: :unprocessable_entity }
       end
     end
