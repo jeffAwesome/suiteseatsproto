@@ -1,5 +1,9 @@
 		  <nav class="navbar">
-			<div class="text-center title"><span class="backbtn float-left">&lt; BACK</span><span>Seating Info</span><span class="menu float-right"></span></div>
+			<div class="text-center title">
+                          <a class="backbtn float-left" href="<%= yield(:back_link) %>">&lt; BACK</a>
+                          <span class="pageTitle"><%= yield(:page_title) %></span>
+                          <span class="menu float-right"></span>
+                        </div>
 			<div class="mobilemenu">
 				<ul>
 					<li><a href="#">Sign up</a></li>
