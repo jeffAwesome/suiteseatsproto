@@ -1,10 +1,6 @@
 <%= content_for :page_title, 'Order Status' %>
 <%= content_for :back_link, '/pages/concessions' %>
 
-<%= javascript_tag do %>
-  window.currentOrder = <%= @order.id %>;
-<% end %>
-
 <%= render 'shared/main_nav' %>
 <div class="orderstatus-page text-center venuelist">
 		  	<ul>
@@ -32,18 +28,7 @@
 
 			</ul>
 		  </div>
-
-                   <% if @order.paid %>
-                     <% if @order.status == 'Delivered' %>
-                        <h3 style="color: #333;">Placeholder for tip</h3>
-                     <% end %>
 		   <div class="row signupbutton-wrapper text-center">
-				<a href="/pages/concessions" class="signinbtn" style="display: block; width: 100%;">PLACE ANOTHER ORDER</a>
+				<a href="<%= order_path @order %>" class="signinbtn" style="display: block; width: 100%;">Confirm Order</a>
 			</div>
-                   <% else %>
-		        <div class="row signupbutton-wrapper text-center">
-				<a href="#" id="payOrder" class="signinbtn" style="display: block; width: 100%;">Confirm Order</a>
-			</div>
-
-                   <% end %>
 		</div>

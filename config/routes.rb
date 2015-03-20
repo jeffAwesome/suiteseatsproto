@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :orders
 
+  get 'orders/:id/tip', to: 'orders#tip'
+
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
 
   authenticated :user do

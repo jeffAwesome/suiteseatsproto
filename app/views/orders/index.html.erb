@@ -1,29 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="innerpage">
 
-<h1>Listing Orders</h1>
+        <% unless @orders.count > 0 %>
+          <h2 style="color: #333;">No Current Orders</h2>
+        <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  	<div class="activeorders venuelist" style="margin-top: 20px;">
+ 	 	<ul>
+                        <% @orders.each do |item| %>
+			<li>
+				<div class="items lastest">
+					<h2>NEW ORDER AT  <%= item.created_at.strftime('%r') %></h2>
+				</div>
+				<div class="orderdetails-wrapper">
+					<ul class="orderitems">
+                                          <% OrderItem.where(order_id: item.id).each do |oItem|  %>
 
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.user_id %></td>
-        <td><%= order.amount %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+						<li>
+							<div><strong><%= oItem.item_quantity %> <%= oItem.item_name.pluralize %></strong></div>
+						</li>
+                                           <% end %>
+					</ul>
+					<ul>
+						<li>Special Instructions : no matter</li>
+					</ul>
 
-<br>
+					<div class="ordertotal">Total: $<%= item.amount %></div>
 
-<%= link_to 'New Order', new_order_path %>
+                                        <% seat = Seat.where(user_id: current_user.id).last %>
+					<div class="orderposition">Row: <%= seat.row %> | Seat: <%= seat.seat %></div>
+					<div class="orderstatus">Status: <%= item.status %></div>
+					 <div class="row signupbutton-wrapper text-center">
+						<button class="signinbtn" id="completeOrder" data-id="<%= item.id %>">MARK AS OUT FOR DELIVERY</button>
+		 			</div>
+				</div>
+			</li>
+                        <% end %>
+		</ul>
+	  </div>
+	</div>
+
+
+
+
+
+
+

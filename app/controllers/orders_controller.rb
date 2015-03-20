@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.where.not(status: 'Delivered').where(paid: true)
   end
 
   # GET /orders/1
@@ -14,6 +14,12 @@ class OrdersController < ApplicationController
     @seat = Seat.where(user_id: current_user.id).last
     @orderItems = OrderItem.where(order_id: @order.id)
   end
+
+  def confirm_show
+    @seat = Seat.where(user_id: current_user.id).last
+    @orderItems = OrderItem.where(order_id: @order.id)
+  end
+
 
   # GET /orders/new
   def new

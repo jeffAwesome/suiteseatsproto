@@ -36,8 +36,17 @@ setTimeout ->
 
       return true
 
-  $(".btncheckout").click (e) ->
+  $(".btncheckout").not("#payOrder, #completeOrder").click (e) ->
     createOrder()
+
+  $("#payOrder").click (e) ->
+    payOrder()
+
+  $("#completeOrder").click (e) ->
+    console.log e
+    window.currentOrder = e.currentTarget.dataset.id
+    completeOrder()
+
 
 , 300
 
@@ -49,9 +58,9 @@ createOrder = () ->
     data: {
       order: {
         amount: window.totalAmount
-        paid: true
+        paid: false
         completed: false
-        status: "Started"
+        status: "Pending Payment"
       }
     }
     success: (e) ->
@@ -61,6 +70,47 @@ createOrder = () ->
     error: () ->
       console.log "hey we failed"
   )
+
+payOrder = () ->
+  $.ajax(
+    url: '/orders/'+window.currentOrder
+    type: "PUT"
+    data: {
+      order: {
+        status: 'order started'
+        paid: true
+      }
+    }
+    success: (e) ->
+      setTimeout ->
+        window.location.href = '/orders/'+window.currentOrder
+      , 300
+    error: () ->
+      setTimeout ->
+        window.location.href = '/orders/'+window.currentOrder
+      , 300
+      console.log "hey we failed"
+  )
+
+
+completeOrder = (e) ->
+  console.log "were in the complete order tab"
+  $.ajax(
+    url: '/orders/'+window.currentOrder
+    type: "PUT"
+    data: {
+      order: {
+        status: 'Delivered'
+      }
+    }
+    success: (e) ->
+      setTimeout ->
+        window.location.href = '/orders/'
+      , 300
+    error: () ->
+      window.location.href = '/orders/'
+  )
+
 
 
 
