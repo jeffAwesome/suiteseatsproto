@@ -1,5 +1,28 @@
+<%= javascript_tag do %>
+	function checkout_latest_orders()
+	{
+		$.ajax({
+		  url: '/orders/currentcount',
+		  type: "GET",
+		  data: {},
+		  success: function(data) {			
+		  	 console.log(data);
+			if($("#ordercount").val() < data){
+				return window.location.href = '/orders';
+			}
+		  },
+		  error: function() {
+			return console.log("hey we failed");
+		  }
+		});
+	}
+	window.setInterval(function(){
+	  checkout_latest_orders();
+	}, 15000);
+  
+<% end %>
 <div class="innerpage">
-
+	<input type="hidden" name="ordercount" id="ordercount" value="<%= @orders.count %>">
         <% unless @orders.count > 0 %>
           <h2 style="color: #333;">No Current Orders</h2>
         <% end %>
@@ -26,7 +49,7 @@
 
 					<div class="ordertotal">Total: $<%= item.amount %></div>
 
-                                        <% seat = Seat.where(user_id: current_user.id).last %>
+                                        <% seat = Seat.where(user_id: @order_user_id).last %>
 					<div class="orderposition">Row: <%= seat.row %> | Seat: <%= seat.seat %></div>
 					<div class="orderstatus">Status: <%= item.status %></div>
 					 <div class="row signupbutton-wrapper text-center">

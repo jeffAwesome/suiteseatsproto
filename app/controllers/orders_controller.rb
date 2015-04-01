@@ -20,6 +20,14 @@ class OrdersController < ApplicationController
     @orderItems = OrderItem.where(order_id: @order.id)
   end
 
+  def tip
+     format.html {render :text => "Text"}
+  end
+
+  def currentcount
+    @orderCount = Order.where.not(status: 'Delivered').where(paid: true).count
+    render :text => @orderCount
+  end
 
   # GET /orders/new
   def new

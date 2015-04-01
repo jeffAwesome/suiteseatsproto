@@ -6,9 +6,11 @@ Rails.application.routes.draw do
 
   resources :order_items
 
-  resources :orders
+  get 'orders/currentcount', to: 'orders#currentcount'
 
   get 'orders/:id/tip', to: 'orders#tip'
+
+  resources :orders
 
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
 
