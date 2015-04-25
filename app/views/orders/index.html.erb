@@ -50,7 +50,9 @@
 						<li>Special Instructions : no matter</li>
 					</ul>
 
+					<% unless item.amount == nil %>
 					<div class="ordertotal">Total: $<%= item.amount %></div>
+					<% end %>
 
                                         <% seat = Seat.where(user_id: @order_user_id).last %>
 					<div class="orderposition">Row: <%= seat.row %> | Seat: <%= seat.seat %></div>
