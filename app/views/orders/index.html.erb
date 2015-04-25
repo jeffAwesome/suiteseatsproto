@@ -21,6 +21,8 @@
 	}, 15000);
   
 <% end %>
+
+<% unless @orders == nil %>
 <div class="innerpage">
 	<input type="hidden" name="ordercount" id="ordercount" value="<%= @orders.count %>">
         <% unless @orders.count > 0 %>
@@ -29,7 +31,7 @@
 
   	<div class="activeorders venuelist" style="margin-top: 20px;">
  	 	<ul>
- 	 		<% if @orders != nil && @orders.count > 0 %>
+ 	 		<% if @orders.count > 0 %>
                         <% @orders.each do |item| %>
 			<li>
 				<div class="items lastest">
@@ -63,7 +65,7 @@
 		</ul>
 	  </div>
 	</div>
-
+<% end %>
 
 
 
