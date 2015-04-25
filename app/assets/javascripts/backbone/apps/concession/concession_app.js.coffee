@@ -1,6 +1,28 @@
 setTimeout ->
 
 
+  $(".accordion-arrow").each ->
+    that = $(this)
+
+    that.on 'click', (e) ->
+      accordionDetails = that.parent().parent().parent().find('.accordion-details')
+      upImage = that.parent().find('.up-arrow');
+      downImage = that.parent().find('.down-arrow');
+
+      console.log that.parent().parent()
+
+      if upImage.hasClass('hide')
+        upImage.removeClass('hide')
+        downImage.addClass('hide')
+      else
+        downImage.removeClass('hide')
+        upImage.addClass('hide')
+
+      if accordionDetails.hasClass('hide')
+        accordionDetails.slideDown(200).removeClass('hide')
+      else
+        accordionDetails.slideUp(200).addClass('hide')
+
   formatMoney = (x) ->
     x = if isNaN(x) or x == '' or x == null then 0.00 else x
     '$' + parseFloat(x).toFixed(2)

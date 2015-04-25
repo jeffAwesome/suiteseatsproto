@@ -29,6 +29,7 @@
 
   	<div class="activeorders venuelist" style="margin-top: 20px;">
  	 	<ul>
+ 	 		<% unless @orders.count < 0 %>
                         <% @orders.each do |item| %>
 			<li>
 				<div class="items lastest">
@@ -57,6 +58,7 @@
 		 			</div>
 				</div>
 			</li>
+                        <% end %>
                         <% end %>
 		</ul>
 	  </div>

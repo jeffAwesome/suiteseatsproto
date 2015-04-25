@@ -12,7 +12,8 @@
 					</div>
 					<div class="venuedetails">
 						<h2>FOOD <span class="accordion-arrow">
-							<%= image_tag "up_arrow.png" %>
+							<%= image_tag "up_arrow.png", class: 'up-arrow ' %>
+							<%= image_tag "down_arrow.png", class: 'down-arrow hide' %>
 							</span>
 						</h2>
 					</div>
@@ -83,10 +84,70 @@
 					<div class="venuedetails">
 						<h2>DRINKS
 							<span class="accordion-arrow">
- 								<%= image_tag "down_arrow.png" %>
+								<%= image_tag "up_arrow.png", class: 'up-arrow hide' %>
+ 								<%= image_tag "down_arrow.png", class: 'down-arrow' %>
 							</span>
 						</h2>
-					</div>
+					</div><!-- venue details -->
+					<div class="clear"></div>
+					<div class="accordion-details hide">
+						<ul class="productlist">
+							<li class="productitem" data-item-name="Coffee" data-item-price="500" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "coffee.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">COFFEE</span><br>
+									<span class="price">$5.00</span>
+								</div>
+								<div class="itemselection" id="coffeeQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+ 										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+							<li class="productitem" data-item-name="Dr. Pepper" data-item-price="250" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "soda.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">DR. Pepper</span><br>
+									<span class="price">$2.50</span>
+								</div>
+								<div class="itemselection" id="drPepperQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+							<li class="productitem" data-item-name="Pepsi" data-item-price="250" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "soda.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">Pepsi</span><br>
+									<span class="price">$2.50</span>
+								</div>
+								<div class="itemselection" id="pepsiQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div><!-- accordion details -->
 				</li>
 				<li>
 					<div class="venueimg">
@@ -95,10 +156,55 @@
 					<div class="venuedetails">
 						<h2>MERCHANDISE
 							<span class="accordion-arrow">
-								<%= image_tag "down_arrow.png" %>
+								<%= image_tag "up_arrow.png", class: 'up-arrow hide' %>
+								<%= image_tag "down_arrow.png", class: 'down-arrow' %>
 							</span>
 						</h2>
-					</div>
+					</div><!-- venue details -->
+
+					<div class="clear"></div>
+					<div class="accordion-details hide">
+						<ul class="productlist">
+							<li class="productitem" data-item-name="Home Team Cap" data-item-price="1500" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "caps.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">Home Team Cap</span><br>
+									<span class="price">$15.00</span>
+								</div>
+								<div class="itemselection" id="homeTeamCapQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+ 										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+							<li class="productitem" data-item-name="Home Team Jersey" data-item-price="2500" data-item-quantity="0">
+								<div class="itemimg">
+									<%= image_tag "jersey.png" %>
+								</div>
+								<div class="itemdetails">
+									<span class="name">Home Team Jersey</span><br>
+									<span class="price">$25.00</span>
+								</div>
+								<div class="itemselection" id="homeTeamJerseyQnt">
+									<div class="plus">
+										<%= image_tag "plus.png" %>
+									</div>
+									<div class="cnt">0</div>
+									<div class="subtract">
+										<%= image_tag "minus.png" %>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div><!-- accordion details -->
+
+
 				</li>
 			</ul>
 		  </div>

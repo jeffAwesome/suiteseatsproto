@@ -6,11 +6,16 @@
                         </div>
 			<div class="mobilemenu">
 				<ul>
-					<li><a href="#">Sign up</a></li>
+<!--					<li><a href="#">Sign up</a></li>
 					<li><a href="#">Sign In</a></li>
-					<li><a href="#">Billing Info</a></li>
-					<li><a href="#">Select Venue</a></li>
-					<li><a href="#">Order Concessions</a></li>
+					<li><a href="#">Billing Info</a></li> -->
+					<% if current_user %>
+					<li>
+						<%= link_to('Logout', destroy_user_session_path) %>  
+					</li>
+					<% end %>
+					<li><a href="../pages/venue">Select Venue</a></li>
+					<li><a href="../pages/concessions">Place An Order</a></li>
 					<li><a href="#">Check Order Status</a></li>
 				</ul>
 			</div>

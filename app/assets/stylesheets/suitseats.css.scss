@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+.hide {
+	display: none;
+}
 html{
 	height:100%;
 	width:100%;
@@ -407,4 +410,25 @@ img{
 }
 .signupbutton-wrapper .mailsignupbtn .signuppad{
 	padding-top:10px;
+}
+
+
+
+/* FIeld */
+
+.field {
+	clear: both;
+}
+
+.remember-me-container {
+	width: 300px;
+	margin: 0 auto;
+}
+
+#user_remember_me {
+	width: 25px;
+}
+
+.remember-me-container label {
+	color: #333;
 }
