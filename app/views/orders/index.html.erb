@@ -55,7 +55,7 @@
 					<% end %>
 
 
-                    <% seat = Seat.where(user_id: @order.user_id).last %>
+                    <% seat = Seat.where(user_id: item.user_id).last %>
 
                     <% if seat.row == nil || seat.seat == nil %>
 					<div class="orderposition">Row: <%= seat.row %> | Seat: <%= seat.seat %></div>
